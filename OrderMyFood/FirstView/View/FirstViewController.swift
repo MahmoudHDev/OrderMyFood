@@ -17,11 +17,13 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var forgetPassBtn: UIButton!
     @IBOutlet weak var loginFace    : UIButton!
     @IBOutlet weak var loginGoog    : UIButton!
-
+    
+    var presenter: FirstPresenterView?
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        presenter = FirstPresenterView(view: self)
+        updateUI()
     }
 
     //MARK:- Actions
@@ -45,7 +47,28 @@ class FirstViewController: UIViewController {
     @IBAction func firstBtn(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            print("signup or login")
+            if segmentControl.selectedSegmentIndex == 0 {
+                // For Signup
+                guard let name      = username.text,
+                      let email     = email.text,
+                      let password  = password.text else {
+                    return
+                }
+                
+                presenter?.signUp(username: name, email: email, password: password )
+                print("SignUp")
+                
+                
+            }else {
+                // For login
+                guard let email     = email.text,
+                      let password  = password.text else {
+                    return
+                }
+                presenter?.signIn(email: email, password: password)
+                print("SignIn")
+            }
+            
         case 1:
             print("Forget your Password")
         case 2:
@@ -56,6 +79,31 @@ class FirstViewController: UIViewController {
                print("No buttons")
         }
     }
+ 
+    func updateUI() {
+        let selected = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let normal = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        UISegmentedControl.appearance().setTitleTextAttributes(selected, for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes(normal, for: .normal)
+    }
+}
+
+//MARK:- Presenter
+
+extension FirstViewController: FirstPresenterProtocol {
+    func signupSuccess() {
+        print("sign In Succeded")
+    }
+    
+    func signinSuccess() {
+        print("sign In Succeded")
+    }
+    
+    func faildReg() {
+        print("signin or up  failed")
+    }
+    
     
 }
 
