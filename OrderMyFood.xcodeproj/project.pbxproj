@@ -16,6 +16,9 @@
 		1EC51BD4287718AF00E4AE69 /* FirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC51BD3287718AF00E4AE69 /* FirstPresenter.swift */; };
 		1ECB605B287771D5006D757E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ECB605A287771D5006D757E /* GoogleService-Info.plist */; };
 		1ECB605F28777945006D757E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB605E28777945006D757E /* Constant.swift */; };
+		1ECB60682877872D006D757E /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB60672877872D006D757E /* PersonalInfoViewController.swift */; };
+		1ECB606B28778C03006D757E /* PersonalInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB606A28778C03006D757E /* PersonalInfoPresenter.swift */; };
+		1ECB606E28778D31006D757E /* PersonalInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECB606D28778D31006D757E /* PersonalInfo.storyboard */; };
 		3CFA3AA2E94653E0036A2296 /* Pods_OrderMyFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31E61BEC46B7512336EB031 /* Pods_OrderMyFood.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		1EC51BD3287718AF00E4AE69 /* FirstPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenter.swift; sourceTree = "<group>"; };
 		1ECB605A287771D5006D757E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1ECB605E28777945006D757E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		1ECB60672877872D006D757E /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		1ECB606A28778C03006D757E /* PersonalInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoPresenter.swift; sourceTree = "<group>"; };
+		1ECB606D28778D31006D757E /* PersonalInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalInfo.storyboard; sourceTree = "<group>"; };
 		8CFB6E8A4821746135A28326 /* Pods-OrderMyFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderMyFood.release.xcconfig"; path = "Target Support Files/Pods-OrderMyFood/Pods-OrderMyFood.release.xcconfig"; sourceTree = "<group>"; };
 		AE6BA7E6E6F421765CD1E488 /* Pods-OrderMyFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderMyFood.debug.xcconfig"; path = "Target Support Files/Pods-OrderMyFood/Pods-OrderMyFood.debug.xcconfig"; sourceTree = "<group>"; };
 		D31E61BEC46B7512336EB031 /* Pods_OrderMyFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderMyFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +152,7 @@
 		1ECB6063287786A1006D757E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1ECB606A28778C03006D757E /* PersonalInfoPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 		1ECB6064287786A9006D757E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1ECB60672877872D006D757E /* PersonalInfoViewController.swift */,
+				1ECB606D28778D31006D757E /* PersonalInfo.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECB606E28778D31006D757E /* PersonalInfo.storyboard in Resources */,
 				1E6EC7202870851A00E59AC3 /* LaunchScreen.storyboard in Resources */,
 				1ECB605B287771D5006D757E /* GoogleService-Info.plist in Resources */,
 				1E6EC71D2870851A00E59AC3 /* Assets.xcassets in Resources */,
@@ -305,10 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECB606B28778C03006D757E /* PersonalInfoPresenter.swift in Sources */,
 				1E6EC7182870851800E59AC3 /* FirstViewController.swift in Sources */,
 				1E6EC7142870851800E59AC3 /* AppDelegate.swift in Sources */,
 				1ECB605F28777945006D757E /* Constant.swift in Sources */,
 				1E6EC7162870851800E59AC3 /* SceneDelegate.swift in Sources */,
+				1ECB60682877872D006D757E /* PersonalInfoViewController.swift in Sources */,
 				1EC51BD4287718AF00E4AE69 /* FirstPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
