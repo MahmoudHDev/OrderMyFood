@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toppng.com-clip-art-library-download-hamburger-fast-food-junk-977x966.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
