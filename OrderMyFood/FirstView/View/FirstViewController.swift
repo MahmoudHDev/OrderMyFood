@@ -17,7 +17,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var forgetPassBtn: UIButton!
     @IBOutlet weak var loginFace    : UIButton!
     @IBOutlet weak var loginGoog    : UIButton!
-    
+    @IBOutlet weak var errorMssg    : UILabel!
     var presenter: FirstPresenterView?
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -51,15 +51,10 @@ class FirstViewController: UIViewController {
                 // For Signup
                 guard let name      = username.text,
                       let email     = email.text,
-                      let password  = password.text else {
-                    return
-                }
-                
+                      let password  = password.text else {return}
                 presenter?.signUp(username: name, email: email, password: password )
                 print("SignUp")
-                
-                
-            }else {
+                }else {
                 // For login
                 guard let email     = email.text,
                       let password  = password.text else {
@@ -81,27 +76,35 @@ class FirstViewController: UIViewController {
     }
  
     func updateUI() {
-        let selected = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let selected = [NSAttributedString.Key.foregroundColor: UIColor.black]
         let normal = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
+        let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+
+        view.addGestureRecognizer(tapGesture)
         UISegmentedControl.appearance().setTitleTextAttributes(selected, for: .selected)
         UISegmentedControl.appearance().setTitleTextAttributes(normal, for: .normal)
     }
+    
 }
 
 //MARK:- Presenter
-
 extension FirstViewController: FirstPresenterProtocol {
+    
     func signupSuccess() {
-        print("sign In Succeded")
+        // Show the UserInformationViewController
+        print("signup Succeded")
     }
     
     func signinSuccess() {
+        //Show the HomeViewController
         print("sign In Succeded")
     }
     
-    func faildReg() {
-        print("signin or up  failed")
+    func signUpError(error:String) {
+        // show in error Label
+        errorMssg.isHidden = false
+        errorMssg.text = error
+        
     }
     
     
