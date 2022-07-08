@@ -10,6 +10,7 @@ import UIKit
 
 
 class PersonalInfoViewController: UIViewController {
+    
     //MARK:- Properties
     @IBOutlet weak var profilePhoto : UIImageView!
     @IBOutlet weak var changeImgBtn : UIButton!
@@ -23,7 +24,7 @@ class PersonalInfoViewController: UIViewController {
     let imagePicker                 = UIImagePickerController()
     let datePicker                  = UIDatePicker()
     
-    var pickerData: [String] = ["Male", "Female", "Not Specified"]
+    var pickerData: [String] = ["Male", "Female", "Prefer not to select"]
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -51,10 +52,9 @@ class PersonalInfoViewController: UIViewController {
     func updateUI(){
         profilePhoto.layer.cornerRadius = 0.5 * profilePhoto.bounds.width
         changeImgBtn.layer.cornerRadius = 0.5 * changeImgBtn.bounds.width
-        continueBtn.layer.cornerRadius = 25
+        continueBtn.layer.cornerRadius = 15
     }
     
-        
 }
 
 //MARK:- Presenter

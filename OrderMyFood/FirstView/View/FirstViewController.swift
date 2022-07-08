@@ -93,6 +93,10 @@ extension FirstViewController: FirstPresenterProtocol {
     func signupSuccess() {
         // Show the UserInformationViewController
         print("signup Succeded")
+        
+        let storyBoard = UIStoryboard.init(name: "PersonalInfo", bundle: nil).instantiateViewController(identifier: "showInfoView")
+        self.dismiss(animated: true, completion: nil)
+        self.present(storyBoard, animated: true)
     }
     
     func signinSuccess() {

@@ -41,7 +41,6 @@ extension PersonalInfoViewController: UIPickerViewDelegate, UIPickerViewDataSour
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
@@ -82,6 +81,7 @@ extension PersonalInfoViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
         dateOB.text = formatter.string(from: datePicker.date)
+        dateOB.placeholder = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
     
@@ -91,4 +91,3 @@ extension PersonalInfoViewController {
     }
 
 }
-

@@ -65,6 +65,7 @@ class FirstPresenterView {
                 
                 let document = self.ref.collection(K.FStoreCollections.users).document(user.uid)
                 document.setData(values)
+                self.view?.signupSuccess()
                 print("Successfully sent to the Realtime DB")
             }
         }
