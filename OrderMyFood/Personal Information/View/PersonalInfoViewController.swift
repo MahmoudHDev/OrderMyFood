@@ -3,66 +3,65 @@
 //  OrderMyFood
 //
 //  Created by Mahmoud on 7/7/22.
-//
+// User will get this viewController once he signed up for the first time
 
 import UIKit
+
+
 
 class PersonalInfoViewController: UIViewController {
     //MARK:- Properties
     @IBOutlet weak var profilePhoto : UIImageView!
-    @IBOutlet weak var gender       : UIPickerView!
+    @IBOutlet weak var changeImgBtn : UIButton!
     @IBOutlet weak var fName        : UITextField!
     @IBOutlet weak var lName        : UITextField!
+    @IBOutlet weak var gender       : UIPickerView!
     @IBOutlet weak var dateOB       : UITextField!
+    @IBOutlet weak var continueBtn  : UIButton!
+    
     var presenter                   : PersonalInfoView?
     let imagePicker                 = UIImagePickerController()
     let datePicker                  = UIDatePicker()
+    
+    var pickerData: [String] = ["Male", "Female", "Not Specified"]
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = PersonalInfoView(view: self)
+        updateUI()
         showDatePicker()
+        configPickers()
+        textFieldConfig()
     }
 
     //MARK:- Action
-
-    func showDatePicker() {
-        // Formate Date
-        datePicker.datePickerMode = .date
+    @IBAction func buttonsView(_ sender: UIButton){
+        // tag 0 => image picker
+        if sender.tag == 0 {
+            pickAnImg()
+        }else{
+//            boxesFilled()
+            
+        }
+    }
+    
+    //MARK:- Functions
+    
+    func updateUI(){
+        profilePhoto.layer.cornerRadius = 0.5 * profilePhoto.bounds.width
+        changeImgBtn.layer.cornerRadius = 0.5 * changeImgBtn.bounds.width
+        continueBtn.layer.cornerRadius = 25
+    }
+    
         
-        // ToolBar
-        let toolbar = UIToolbar();
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
-
-        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-
-        dateOB.inputAccessoryView = toolbar
-        dateOB.inputView          = datePicker
-    }
-    
-    @objc
-    func donedatePicker() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
-        dateOB.text = formatter.string(from: datePicker.date)
-        self.view.endEditing(true)
-    }
-    
-    @objc
-    func cancelDatePicker(){
-        self.view.endEditing(true)
-    }
-    
 }
 
+//MARK:- Presenter
 extension PersonalInfoViewController: PersonalInfoProtocol {
+    
     func dataSaved() {
         print("Data Saved")
     }
-    
     
 }
