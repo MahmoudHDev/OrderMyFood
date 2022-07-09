@@ -24,5 +24,11 @@ struct K {
         static let userId       = "userId"
         static let dateJoined   = "dateJoined"
     }
+    struct PersonalInfo {
+        static let fName        = "firstName"
+        static let lName        = "lastName"
+        static let gender       = "gender"
+        static let dateOB       = "born"
+    }
     
 }

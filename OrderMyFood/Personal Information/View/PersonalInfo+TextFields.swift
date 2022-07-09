@@ -16,11 +16,12 @@ extension PersonalInfoViewController: UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if dateOB.text != "" && fName.text != ""{
+        if dateOB.text != "" && fName.text != "" && lName.text != ""{
             continueBtn.isEnabled       = true
             continueBtn.backgroundColor = #colorLiteral(red: 0, green: 0.7323547006, blue: 0.947804749, alpha: 1)
         }else{
-            // Error Please fill the other fields
+            errorLabel.text = "Please fill all empty fields"
+            errorLabel.textColor = .systemRed
             continueBtn.isEnabled       = false
             continueBtn.backgroundColor = #colorLiteral(red: 0, green: 0.7323547006, blue: 0.947804749, alpha: 0.5)
         }

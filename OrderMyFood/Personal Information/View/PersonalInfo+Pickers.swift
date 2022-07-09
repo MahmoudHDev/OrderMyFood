@@ -7,58 +7,10 @@
 
 import UIKit
 
-
-//MARK:- UIImagePicker
-
-extension PersonalInfoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func configPickers() {
-        imagePicker.delegate        = self
-        imagePicker.allowsEditing   = true
-        gender.delegate             = self
-        gender.dataSource           = self
-    }
-    
-    func pickAnImg() {
-        imagePicker.sourceType = .photoLibrary
-        self.present(imagePicker, animated: true)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
-            profilePhoto.image = image
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-}
-
-//MARK:- UIPickerView
-
-extension PersonalInfoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    //MARK:- Data Source
-
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
-    }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
-    
-    //MARK:- Delegate
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("Gender is \(pickerData[row])")
-    }
-}
-
-
 //MARK:- DatePicker
 
 extension PersonalInfoViewController {
+    
     func showDatePicker() {
         // Formate Date
         datePicker.datePickerMode = .date
