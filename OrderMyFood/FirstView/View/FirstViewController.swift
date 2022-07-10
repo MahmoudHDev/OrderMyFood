@@ -28,7 +28,6 @@ class FirstViewController: UIViewController {
     }
 
     //MARK:- Actions
-
     @IBAction func segmented(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             signupOrInBtn.setTitle("Signup", for: .normal)
@@ -120,8 +119,6 @@ extension FirstViewController: FirstPresenterProtocol {
         errorMssg.text = error
         signupOrInBtn.isEnabled       = true
         signupOrInBtn.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 1)
-    }
-    
-    
+    }    
 }
 

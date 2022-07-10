@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E05077A287851200058319B /* PersonalInfo+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E050779287851200058319B /* PersonalInfo+TextFields.swift */; };
 		1E05077D2878513B0058319B /* PersonalInfo+Pickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E05077C2878513B0058319B /* PersonalInfo+Pickers.swift */; };
+		1E0787C1287B030D00DDAA11 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0787C0287B030D00DDAA11 /* HomeViewController.swift */; };
+		1E0787C4287B032300DDAA11 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E0787C3287B032200DDAA11 /* Home.storyboard */; };
 		1E6EC7142870851800E59AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6EC7132870851800E59AC3 /* AppDelegate.swift */; };
 		1E6EC7162870851800E59AC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6EC7152870851800E59AC3 /* SceneDelegate.swift */; };
 		1E6EC7182870851800E59AC3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6EC7172870851800E59AC3 /* FirstViewController.swift */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		1E050779287851200058319B /* PersonalInfo+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfo+TextFields.swift"; sourceTree = "<group>"; };
 		1E05077C2878513B0058319B /* PersonalInfo+Pickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfo+Pickers.swift"; sourceTree = "<group>"; };
+		1E0787C0287B030D00DDAA11 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1E0787C3287B032200DDAA11 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1E6EC7102870851800E59AC3 /* OrderMyFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderMyFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6EC7132870851800E59AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E6EC7152870851800E59AC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,40 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		1E0787BB287B02C100DDAA11 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1E0787BE287B02D900DDAA11 /* Model */,
+				1E0787BD287B02D400DDAA11 /* View */,
+				1E0787BC287B02CA00DDAA11 /* Presenter */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1E0787BC287B02CA00DDAA11 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			path = "../New Group1/Presenter";
+			sourceTree = "<group>";
+		};
+		1E0787BD287B02D400DDAA11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E0787C0287B030D00DDAA11 /* HomeViewController.swift */,
+				1E0787C3287B032200DDAA11 /* Home.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1E0787BE287B02D900DDAA11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1E6EC7072870851800E59AC3 = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +130,9 @@
 		1E6EC7122870851800E59AC3 /* OrderMyFood */ = {
 			isa = PBXGroup;
 			children = (
-				1ECB60612877867C006D757E /* Personal Information */,
 				1EC51BCE2877183C00E4AE69 /* FirstView */,
+				1ECB60612877867C006D757E /* Personal Information */,
+				1E0787BB287B02C100DDAA11 /* Home */,
 				1E6EC7132870851800E59AC3 /* AppDelegate.swift */,
 				1E6EC7152870851800E59AC3 /* SceneDelegate.swift */,
 				1E6EC7192870851800E59AC3 /* Main.storyboard */,
@@ -256,6 +295,7 @@
 				1ECB606E28778D31006D757E /* PersonalInfo.storyboard in Resources */,
 				1E6EC7202870851A00E59AC3 /* LaunchScreen.storyboard in Resources */,
 				1ECB605B287771D5006D757E /* GoogleService-Info.plist in Resources */,
+				1E0787C4287B032300DDAA11 /* Home.storyboard in Resources */,
 				1E6EC71D2870851A00E59AC3 /* Assets.xcassets in Resources */,
 				1E6EC71B2870851800E59AC3 /* Main.storyboard in Resources */,
 			);
@@ -338,6 +378,7 @@
 				1EC51BD4287718AF00E4AE69 /* FirstPresenter.swift in Sources */,
 				1EBB1FDA2879EF150014C3AF /* First+TextField.swift in Sources */,
 				1E05077A287851200058319B /* PersonalInfo+TextFields.swift in Sources */,
+				1E0787C1287B030D00DDAA11 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

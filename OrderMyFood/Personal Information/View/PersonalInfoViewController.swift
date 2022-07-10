@@ -34,6 +34,7 @@ class PersonalInfoViewController: UIViewController {
         showDatePicker()
         textFieldConfig()
         coreLocationConfig()
+        
     }
 
     //MARK:- Action
@@ -64,11 +65,13 @@ class PersonalInfoViewController: UIViewController {
     //MARK:- Functions
     
     func updateUI(){
-        continueBtn .isEnabled          = false
+        continueBtn .layer.cornerRadius = 20
+        continueBtn.backgroundColor = #colorLiteral(red: 0.1960784314, green: 0.8431372549, blue: 0.2941176471, alpha: 0.5)
+        continueBtn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5), for: .normal)
+        
         profilePhoto.layer.cornerRadius = 0.5 * profilePhoto.bounds.width
         profilePhoto.layer.borderWidth  = 1
         profilePhoto.layer.borderColor  = CGColor(red: 255, green: 159, blue: 41, alpha: 1)
-        continueBtn .layer.cornerRadius = 20
         
     }
     
@@ -78,7 +81,10 @@ extension PersonalInfoViewController: PersonalInfoProtocol {
     
     func dataSaved() {
         print("Data Saved")
-        // Go to next ViewController
+        continueBtn.isEnabled       = false
+        continueBtn.backgroundColor = #colorLiteral(red: 0.1568627451, green: 0.8039215686, blue: 0.2549019608, alpha: 0.5)
+
+        // GO TO NEXT VIEWCONTROLLER
     }
     func errorOccured(er: String){
         print("error \(er)")

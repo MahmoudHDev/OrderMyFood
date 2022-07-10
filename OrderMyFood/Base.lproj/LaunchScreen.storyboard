@@ -26,7 +26,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Qm1-EU-kPQ" firstAttribute="top" secondItem="nYC-sN-MP2" secondAttribute="bottom" constant="10" id="G1W-Nf-2I6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qm1-EU-kPQ" secondAttribute="trailing" constant="20" id="Llx-Wi-ecw"/>
