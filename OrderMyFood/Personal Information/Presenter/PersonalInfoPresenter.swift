@@ -20,9 +20,10 @@ protocol PersonalInfoProtocol{
 class PersonalInfoView {
     
     //MARK:- Properties
-    var view: PersonalInfoProtocol?
-    var ref = Firestore.firestore()
+    var view    : PersonalInfoProtocol?
+    var ref     = Firestore.firestore()
     var storage = Storage.storage().reference()
+    
     //MARK:- Init
     init(view:PersonalInfoProtocol ) {
         self.view = view
@@ -41,15 +42,14 @@ class PersonalInfoView {
         ]
         
         let document = ref.collection(K.FStoreCollections.users).document(user.uid)
-        document.setData(docunmentData) { (err) in
+        document.updateData(docunmentData) { (err) in
             if let er = err  {
                 self.view?.errorOccured(er: er.localizedDescription)
             }else{
+                print("Data has been sent to the Firestore")
                 self.view?.dataSaved()
             }
         }
-        
     }
-    
     
 }

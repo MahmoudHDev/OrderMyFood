@@ -24,6 +24,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         presenter = FirstPresenterView(view: self)
         updateUI()
+        textFieldConfig()
     }
 
     //MARK:- Actions
@@ -63,7 +64,8 @@ class FirstViewController: UIViewController {
                 presenter?.signIn(email: email, password: password)
                 print("SignIn")
             }
-            
+            signupOrInBtn.isEnabled       = false
+            signupOrInBtn.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 0.5)
         case 1:
             print("Forget your Password")
         case 2:
@@ -79,10 +81,16 @@ class FirstViewController: UIViewController {
         let selected = [NSAttributedString.Key.foregroundColor: UIColor.black]
         let normal = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-
+        
         view.addGestureRecognizer(tapGesture)
         UISegmentedControl.appearance().setTitleTextAttributes(selected, for: .selected)
         UISegmentedControl.appearance().setTitleTextAttributes(normal, for: .normal)
+        
+        signupOrInBtn.isEnabled = false
+        signupOrInBtn.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 0.3983572346)
+        signupOrInBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5), for: .normal)
+
+        
     }
     
 }
@@ -101,6 +109,8 @@ extension FirstViewController: FirstPresenterProtocol {
     
     func signinSuccess() {
         //Show the HomeViewController
+        signupOrInBtn.isEnabled       = false
+        signupOrInBtn.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 0.5)
         print("sign In Succeded")
     }
     
@@ -108,7 +118,8 @@ extension FirstViewController: FirstPresenterProtocol {
         // show in error Label
         errorMssg.isHidden = false
         errorMssg.text = error
-        
+        signupOrInBtn.isEnabled       = true
+        signupOrInBtn.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 1)
     }
     
     

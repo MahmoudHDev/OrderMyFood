@@ -17,9 +17,12 @@ extension PersonalInfoViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {return}
-        let coordinate = location.coordinate
-        print("longitude \(coordinate.longitude), latitude \(coordinate.latitude)")
+        if let location  = locations.first {
+            let coordinate      = location.coordinate
+            print("longitude \(coordinate.longitude), latitude \(coordinate.latitude)")
+        }else{
+            print("Error While fetching the location")
+        }
     }
     
 }

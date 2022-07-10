@@ -86,6 +86,10 @@
                                                             <segment title="Male ♂"/>
                                                             <segment title="Female ♀"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="segmentedControll:" destination="aBb-kQ-fKv" eventType="touchUpInside" id="ZOZ-Tz-Mo8"/>
+                                                            <action selector="selectGender:" destination="aBb-kQ-fKv" eventType="valueChanged" id="eiw-gf-3sy"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>

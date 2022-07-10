@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreLocation
-import GoogleMaps
 
 class PersonalInfoViewController: UIViewController {
     
@@ -25,8 +24,6 @@ class PersonalInfoViewController: UIViewController {
     let imagePicker                 = UIImagePickerController()
     let datePicker                  = UIDatePicker()
     let locationManager             = CLLocationManager()
-    let ceo                         = CLGeocoder()
-    let marker                      = GMSMarker()
         
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -49,10 +46,21 @@ class PersonalInfoViewController: UIViewController {
             // female
             gender = "Female"
         }
-        
         presenter?.savePersonalInfo(fName: fName.text!, lName: lName.text!, gender: gender, dOB: dateOB.text!)
-            
+        continueBtn.isEnabled = false
+        continueBtn.backgroundColor = #colorLiteral(red: 0.1568627451, green: 0.8039215686, blue: 0.2549019608, alpha: 0.5)
     }
+    
+    @IBAction func selectGender(_ sender: UISegmentedControl) {
+        if segmentedCont.selectedSegmentIndex == 0 {
+            profilePhoto.image = UIImage(named: "binge-eating")
+        }else {
+            profilePhoto.image = UIImage(named: "woman-eating")
+
+        }
+
+    }
+    
     //MARK:- Functions
     
     func updateUI(){
@@ -60,7 +68,7 @@ class PersonalInfoViewController: UIViewController {
         profilePhoto.layer.cornerRadius = 0.5 * profilePhoto.bounds.width
         profilePhoto.layer.borderWidth  = 1
         profilePhoto.layer.borderColor  = CGColor(red: 255, green: 159, blue: 41, alpha: 1)
-        continueBtn .layer.cornerRadius = 15
+        continueBtn .layer.cornerRadius = 20
         
     }
     
@@ -73,7 +81,8 @@ extension PersonalInfoViewController: PersonalInfoProtocol {
         // Go to next ViewController
     }
     func errorOccured(er: String){
-    print("error \(er)")
+        print("error \(er)")
+        continueBtn.isEnabled = true
     }
 
 }
