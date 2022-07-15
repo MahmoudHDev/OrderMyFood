@@ -80,12 +80,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="U7s-GP-xUS">
-                                <rect key="frame" x="10" y="615.66666666666663" width="394" height="110.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U7s-GP-xUS">
+                                <rect key="frame" x="60" y="615.66666666666663" width="294" height="110.33333333333337"/>
                                 <subviews>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-4i-Dzg">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="53.666666666666664"/>
-                                        <state key="normal" title="Login by Google">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Login by Google" backgroundImage="google-banner">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -93,9 +94,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGr-lx-y6D">
-                                        <rect key="frame" x="0.0" y="56.666666666666742" width="394" height="53.666666666666657"/>
-                                        <state key="normal" title="Login by Facebook">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="60" width="294" height="50.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Login by Facebook" backgroundImage="facebook-banner">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="firstBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uce-DX-Qav"/>
@@ -115,9 +117,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U7s-GP-xUS" secondAttribute="bottom" constant="10" id="0OF-bq-KWG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KUB-bk-8UR" secondAttribute="trailing" constant="20" id="6MH-v5-73u"/>
-                            <constraint firstItem="U7s-GP-xUS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="9fC-YI-UdV"/>
+                            <constraint firstItem="U7s-GP-xUS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="9fC-YI-UdV"/>
                             <constraint firstItem="KUB-bk-8UR" firstAttribute="top" secondItem="cBI-iT-djK" secondAttribute="bottom" constant="10" id="NRm-ND-ME9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U7s-GP-xUS" secondAttribute="trailing" constant="10" id="NhN-dg-dYk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U7s-GP-xUS" secondAttribute="trailing" constant="60" id="NhN-dg-dYk"/>
                             <constraint firstItem="KUB-bk-8UR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OKF-Ve-ide"/>
                             <constraint firstItem="U7s-GP-xUS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="P9q-Fq-Uw6"/>
                             <constraint firstItem="cBI-iT-djK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RhR-nD-vd3"/>
@@ -164,6 +166,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="facebook-banner" width="285" height="69"/>
+        <image name="google-banner" width="285" height="69"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

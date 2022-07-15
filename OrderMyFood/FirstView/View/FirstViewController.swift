@@ -35,11 +35,15 @@ class FirstViewController: UIViewController {
             username.isHidden       = false
             forgetPassBtn.isHidden  = true
             
+            loginFace.setTitle("Signup by Facebook", for: .normal)
+            loginGoog.setTitle("Signup by Google", for: .normal)
         }else{
             signupOrInBtn.setTitle("Login", for: .normal)
             email.placeholder      = "Username or Email"
             forgetPassBtn.isHidden = false
             username.isHidden      = true
+            loginFace.setTitle("Login by Facebook", for: .normal)
+            loginGoog.setTitle("Login by Google", for: .normal)
         }
     }
     
@@ -82,6 +86,7 @@ class FirstViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         
         view.addGestureRecognizer(tapGesture)
+        
         UISegmentedControl.appearance().setTitleTextAttributes(selected, for: .selected)
         UISegmentedControl.appearance().setTitleTextAttributes(normal, for: .normal)
         
@@ -90,6 +95,8 @@ class FirstViewController: UIViewController {
         signupOrInBtn.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 0.3983572346)
         signupOrInBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5), for: .normal)
 
+        loginFace.setTitle("Signup by Facebook", for: .normal)
+        loginFace.setTitle("Signup by Google", for: .normal)
         
     }
     

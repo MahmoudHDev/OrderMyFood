@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         collectionViewConfig()
         addImages()
+        updateUI()
     }
     
     
@@ -32,6 +33,11 @@ class HomeViewController: UIViewController {
         arrItemImgs.append(UIImage(named: "health")!)
         arrItemImgs.append(UIImage(named: "store")!)
         
+    }
+    
+    
+    func updateUI() {
+        // Adding some styles
     }
     
     
