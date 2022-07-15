@@ -18,8 +18,14 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow the app to get your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow the App to locate you location</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -62,11 +68,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
-	<key>NSLocationUsageDescription</key>
-	<string>Allow the app to get your location</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow the App to locate you location</string>
 </dict>
 </plist>

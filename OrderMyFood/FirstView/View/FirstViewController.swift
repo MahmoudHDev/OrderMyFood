@@ -86,6 +86,7 @@ class FirstViewController: UIViewController {
         UISegmentedControl.appearance().setTitleTextAttributes(normal, for: .normal)
         
         signupOrInBtn.isEnabled = false
+        signupOrInBtn.layer.cornerRadius = 25
         signupOrInBtn.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 0.3983572346)
         signupOrInBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5), for: .normal)
 
@@ -110,6 +111,11 @@ extension FirstViewController: FirstPresenterProtocol {
         //Show the HomeViewController
         signupOrInBtn.isEnabled       = false
         signupOrInBtn.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 0.5)
+        self.dismiss(animated: true, completion: nil)
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "showHome")
+        self.present(storyBoard, animated: true)
+        
+        
         print("sign In Succeded")
     }
     

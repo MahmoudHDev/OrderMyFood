@@ -24,6 +24,9 @@
 		1ECB60682877872D006D757E /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB60672877872D006D757E /* PersonalInfoViewController.swift */; };
 		1ECB606B28778C03006D757E /* PersonalInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB606A28778C03006D757E /* PersonalInfoPresenter.swift */; };
 		1ECB606E28778D31006D757E /* PersonalInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECB606D28778D31006D757E /* PersonalInfo.storyboard */; };
+		1ECDFA7928803FA70059BEC1 /* Home+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDFA7828803FA70059BEC1 /* Home+CollectionView.swift */; };
+		1ECDFA7E28803FCD0059BEC1 /* ItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDFA7C28803FCD0059BEC1 /* ItemsCollectionViewCell.swift */; };
+		1ECDFA7F28803FCD0059BEC1 /* ItemsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECDFA7D28803FCD0059BEC1 /* ItemsCollectionViewCell.xib */; };
 		1EE77CA72879D4C000AC6612 /* PersonalInfo+UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE77CA62879D4C000AC6612 /* PersonalInfo+UserLocation.swift */; };
 		3CFA3AA2E94653E0036A2296 /* Pods_OrderMyFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31E61BEC46B7512336EB031 /* Pods_OrderMyFood.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,9 @@
 		1ECB60672877872D006D757E /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		1ECB606A28778C03006D757E /* PersonalInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoPresenter.swift; sourceTree = "<group>"; };
 		1ECB606D28778D31006D757E /* PersonalInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalInfo.storyboard; sourceTree = "<group>"; };
+		1ECDFA7828803FA70059BEC1 /* Home+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CollectionView.swift"; sourceTree = "<group>"; };
+		1ECDFA7C28803FCD0059BEC1 /* ItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewCell.swift; sourceTree = "<group>"; };
+		1ECDFA7D28803FCD0059BEC1 /* ItemsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsCollectionViewCell.xib; sourceTree = "<group>"; };
 		1EE77CA62879D4C000AC6612 /* PersonalInfo+UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfo+UserLocation.swift"; sourceTree = "<group>"; };
 		8CFB6E8A4821746135A28326 /* Pods-OrderMyFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderMyFood.release.xcconfig"; path = "Target Support Files/Pods-OrderMyFood/Pods-OrderMyFood.release.xcconfig"; sourceTree = "<group>"; };
 		AE6BA7E6E6F421765CD1E488 /* Pods-OrderMyFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderMyFood.debug.xcconfig"; path = "Target Support Files/Pods-OrderMyFood/Pods-OrderMyFood.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 		1E0787BD287B02D400DDAA11 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1ECDFA7728803F6D0059BEC1 /* CollectionView */,
 				1E0787C0287B030D00DDAA11 /* HomeViewController.swift */,
 				1E0787C3287B032200DDAA11 /* Home.storyboard */,
 			);
@@ -224,6 +231,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1ECDFA7728803F6D0059BEC1 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1ECDFA7828803FA70059BEC1 /* Home+CollectionView.swift */,
+				1ECDFA7C28803FCD0059BEC1 /* ItemsCollectionViewCell.swift */,
+				1ECDFA7D28803FCD0059BEC1 /* ItemsCollectionViewCell.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		4135570696D0F7167A28A164 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +314,7 @@
 				1ECB605B287771D5006D757E /* GoogleService-Info.plist in Resources */,
 				1E0787C4287B032300DDAA11 /* Home.storyboard in Resources */,
 				1E6EC71D2870851A00E59AC3 /* Assets.xcassets in Resources */,
+				1ECDFA7F28803FCD0059BEC1 /* ItemsCollectionViewCell.xib in Resources */,
 				1E6EC71B2870851800E59AC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +390,8 @@
 				1E6EC7142870851800E59AC3 /* AppDelegate.swift in Sources */,
 				1EE77CA72879D4C000AC6612 /* PersonalInfo+UserLocation.swift in Sources */,
 				1ECB605F28777945006D757E /* Constant.swift in Sources */,
+				1ECDFA7E28803FCD0059BEC1 /* ItemsCollectionViewCell.swift in Sources */,
+				1ECDFA7928803FA70059BEC1 /* Home+CollectionView.swift in Sources */,
 				1E6EC7162870851800E59AC3 /* SceneDelegate.swift in Sources */,
 				1E05077D2878513B0058319B /* PersonalInfo+Pickers.swift in Sources */,
 				1ECB60682877872D006D757E /* PersonalInfoViewController.swift in Sources */,
